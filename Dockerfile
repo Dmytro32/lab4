@@ -13,16 +13,16 @@ RUN apt-get install git -y && pip install pipenv
 WORKDIR /lab
 
 # Завантажуємо файли з Git
-RUN git clone https://github.com/dmytro32/lab3.git
+RUN git clone https://github.com/Dmytro32/lab3.git
 # Створюємо остаточну робочу папку з Веб-сайтом та копіюємо туди файли
 WORKDIR /app
-RUN cp -r /lab/dmyrto/lab3/* .
+RUN cp -r /lab/lab3/* .
 
 # Інсталюємо всі залежності
-RUN pipenv3 install
+RUN pipenv install
 
 # Відкриваємо порт 8000 на зовні
 EXPOSE 8000
 
 # Це команда яка виконається при створенні контейнера
-ENTRYPOINT ["pipenv3", "run", "python3", "manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["pipenv", "run", "python3", "manage.py", "runserver", "0.0.0.0:8000"]
