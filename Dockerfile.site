@@ -1,7 +1,7 @@
 FROM python:3.7-slim
 
 LABEL author="Dmytro"
-LABEL version=1.0
+LABEL version=1.1
 
 # оновлюємо систему
 RUN apt-get update && apt-get upgrade -y
@@ -22,7 +22,7 @@ RUN cp -r /lab/lab3/* .
 RUN pipenv install
 
 # Відкриваємо порт 8000 на зовні
-EXPOSE 8000
+
 
 # Це команда яка виконається при створенні контейнера
 ENTRYPOINT ["pipenv", "run", "python3", "monitoring.py"]

@@ -16,8 +16,8 @@ sudo docker run -it --name=django-page --rm -p 8000:8000 dmytro32/lab4
 * sudo docker build -t monitoring -f Dockerfile.site .
 6. Run both containers using
 
-* sudo docker run --rm -it --net=host -v $(pwd)/logs:/app/logs dmytro32/lab4
+* sudo docker run --rm -it --net=host -v $(pwd)/logs:/app/logs dmytro32/lab4 -creates only folder without any files
 
-* sudo docker run -it --name=django-page --rm --publish 8000:8000 dmytro32/la* b4
+* sudo docker run -it --name=django-page --rm --publish 8000:8000 dmytro32/la* b4 
 
 

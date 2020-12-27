@@ -1,7 +1,7 @@
 FROM python:3.7-slim
 
 LABEL author="Dmytro"
-LABEL version=1.0
+LABEL version=1.1
 
 # оновлюємо систему
 RUN apt-get update && apt-get upgrade -y
